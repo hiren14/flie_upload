@@ -31,13 +31,13 @@ function App() {
   return (
     <>
         <div className="container">
-          <h3 className="text-danger font-weight-bolder border-bottom text-center">Single & Multiple File Upload Using MERN Stack </h3>
+          <h3 className="text-danger font-weight-bolder border-bottom text-center">Upload Document here</h3>
           <FileUploadScreen getsingle={() => getSingleFileslist()} getMultiple={() => getMultipleFilesList()}/>
        </div> 
        <div className="container-fluid mt-5">
          <div className="row">
            <div className="col-6">
-             <h4 className="text-success font-weight-bold">Single Files List</h4>
+             <h4 className="text-success font-weight-bold"></h4>
              <div className="row">
                 {singleFiles.map((file, index) => 
                   <div className="col-6">

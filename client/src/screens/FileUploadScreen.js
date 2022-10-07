@@ -49,10 +49,11 @@ const FileUploadScreen = (props) => {
         props.getMultiple();
     }
     return (
+        <>
         <div className="row mt-3">
             <div className="col-6">
                 <div className="form-group">
-                    <label>Select Single File</label>
+                    <label>Upload Adharcard</label>
                     <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
                 </div>
                 <div className="row">
@@ -78,8 +79,133 @@ const FileUploadScreen = (props) => {
                 </div>
             </div>
            
+        </div>
+       
+        <div className="row mt-3">
+            <div className="col-6">
+                <div className="form-group">
+                    <label>Upload Pancard</label>
+                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
+                </div>
+                <div className="row">
+                    <div className="col-10">
+                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile()} >Upload</button>
                     </div>
-               );
+                    <div className="col-2">
+                        <CircularProgressbar
+                            value={singleProgress}
+                            text={`${singleProgress}%`}
+                            styles={buildStyles({
+                                rotation: 0.25,
+                                strokeLinecap: 'butt',
+                                textSize: '16px',
+                                pathTransitionDuration: 0.5,
+                                pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
+                                textColor: '#f88',
+                                trailColor: '#d6d6d6',
+                                backgroundColor: '#3e98c7',
+                            })}
+                        />
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div className="row mt-3">
+            <div className="col-6">
+                <div className="form-group">
+                    <label>Upload Bank Passbook </label>
+                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
+                </div>
+                <div className="row">
+                    <div className="col-10">
+                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile()} >Upload</button>
+                    </div>
+                    <div className="col-2">
+                        <CircularProgressbar
+                            value={singleProgress}
+                            text={`${singleProgress}%`}
+                            styles={buildStyles({
+                                rotation: 0.25,
+                                strokeLinecap: 'butt',
+                                textSize: '16px',
+                                pathTransitionDuration: 0.5,
+                                pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
+                                textColor: '#f88',
+                                trailColor: '#d6d6d6',
+                                backgroundColor: '#3e98c7',
+                            })}
+                        />
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+        <div className="row mt-3">
+            <div className="col-6">
+                <div className="form-group">
+                    <label>Upload Passport Size Photograph Of The Applicant</label>
+                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
+                </div>
+                <div className="row">
+                    <div className="col-10">
+                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile()} >Upload</button>
+                    </div>
+                    <div className="col-2">
+                        <CircularProgressbar
+                            value={singleProgress}
+                            text={`${singleProgress}%`}
+                            styles={buildStyles({
+                                rotation: 0.25,
+                                strokeLinecap: 'butt',
+                                textSize: '16px',
+                                pathTransitionDuration: 0.5,
+                                pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
+                                textColor: '#f88',
+                                trailColor: '#d6d6d6',
+                                backgroundColor: '#3e98c7',
+                            })}
+                        />
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+       
+        
+        <div className="row mt-3">
+            <div className="col-6">
+                <div className="form-group">
+                    <label>Upload  10th Or 12th Pass Certificate</label>
+                    <input type="file" className="form-control" onChange={(e) => SingleFileChange(e)} />
+                </div>
+                <div className="row">
+                    <div className="col-10">
+                        <button type="button" className="btn btn-danger" onClick={() => uploadSingleFile()} >Upload</button>
+                    </div>
+                    <div className="col-2">
+                        <CircularProgressbar
+                            value={singleProgress}
+                            text={`${singleProgress}%`}
+                            styles={buildStyles({
+                                rotation: 0.25,
+                                strokeLinecap: 'butt',
+                                textSize: '16px',
+                                pathTransitionDuration: 0.5,
+                                pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
+                                textColor: '#f88',
+                                trailColor: '#d6d6d6',
+                                backgroundColor: '#3e98c7',
+                            })}
+                        />
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        </>  
+        );
 }
 
 export default FileUploadScreen;
